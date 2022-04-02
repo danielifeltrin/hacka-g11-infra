@@ -11,7 +11,7 @@ resource "google_sql_database_instance" "master" {
   }
 }
 resource "google_sql_database" "database" {
-  name      = "database_name"
+  name      = "playlists"
   instance  = google_sql_database_instance.master.name
   charset   = "utf8"
   collation = "utf8_general_ci"
@@ -37,7 +37,7 @@ resource "google_artifact_registry_repository" "spotmusic-frontend" {
   provider = google-beta
 
   location      = "us-central1"
-  repository_id = "spotmusic-frontend"
+  repository_id = "spotmusic-frontend_test_terraform"
   description   = "Repositório Front-End - SpotMusic - Grupo 11"
   format        = "DOCKER"
 }
@@ -47,7 +47,7 @@ resource "google_artifact_registry_repository" "spotmusic-backend" {
   provider = google-beta
 
   location      = "us-central1"
-  repository_id = "spotmusic-backend"
+  repository_id = "spotmusic-backend_test_terraform"
   description   = "Repositório Front-End - SpotMusic - Grupo 11"
   format        = "DOCKER"
 }

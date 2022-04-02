@@ -9,7 +9,7 @@ variable "bucket_name" {
 variable "cloud_sql_instance_name" {
   type        = string
   description = "Nome da Instância do Cloud SQL"
-  default     = "spotmusic-grupo11"
+  default     = "spotmusic-grupo11_test_terraform"
 }
 
 variable "project_id" {
