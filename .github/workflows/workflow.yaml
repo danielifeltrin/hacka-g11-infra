@@ -29,6 +29,7 @@ jobs:
         run: terraform fmt -check -diff
         with:
           tf_actions_working_dir: 'terraform/'
+          
 
       - name: Terraform Validate
         run: terraform validate -no-color
